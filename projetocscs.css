@@ -1,0 +1,308 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--primario);
+    height: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    --primario: #f5f2f2;
+    --secundario: #684eb1;
+    --cinza-claro: #dcdde1;
+    --branco: #ffffff;
+    --sombra: rgba(0, 0, 0, 0.1);
+}
+
+header {
+    background-color: var(--primario);
+    color: var(--branco);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+
+.Pesquisa {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex: 1; 
+}
+
+.Pesquisa > div {
+    display: flex;
+    justify-content: center; 
+}
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--secundario);
+}
+
+.TextoDeBusca::placeholder{
+    color: black;
+}
+.TextoDeBusca {
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid white;
+    width: 450px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.BotaoDeBusca {
+    background-color: var(--secundario);
+    border: none;
+    padding: 8px 12px;
+    margin-left: 8px;
+    border-radius: 5px;
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.BotaoDeBusca:hover {
+    background-color: black;
+}
+
+
+.container {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+}
+.container .canto .filtrosCheck{
+    padding: 30px;
+    padding-top: 0;
+}
+.container .canto .promocao{
+    padding: 10px;    
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.container .canto .promocao span{
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container .canto .promocao .botao-de-promo{
+    width: 200px;
+    height: 35px;
+    background-color: var(--secundario);
+    border-radius: 10px;
+    border: solid 0px ;
+
+}
+.container .canto .promocao .botao-de-promo:hover{
+    background-color: #462a92;
+    color: white;
+}
+.container .canto .frete {
+    padding: 10px;    
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.container .canto .frete span {
+  font-size: 17px;
+}
+.container .canto .frete .botao-de-frete{
+    width: 200px;
+    height: 35px;
+    background-color: var(--secundario);
+    border-radius: 10px;
+    border: solid 0px ;
+}
+.container .canto .frete .botao-de-frete:hover{
+    background-color: #462a92;
+    color: white;
+}
+
+
+.canto {
+    flex: 0 0 220px; 
+    background-color: var(--primario);
+    color: black;
+    padding: 20px;
+    box-shadow: 2px 0 10px var(--sombra);
+    height: calc(100vh - 70px); 
+    overflow-y: auto;
+}
+
+.canto h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--branco);
+    padding-bottom: 5px;
+}
+
+.canto div {
+    margin-bottom: 15px;
+}
+
+.canto label {
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+main {
+    flex-grow: 1;
+    padding-left: 60px;
+    padding-right: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; 
+    
+}
+
+
+
+main .produto .produto-imagem {
+    width: 150px;
+    height: 200px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    padding-left: 90px;
+    padding-right: 90px;
+}
+
+main .produto:hover {
+    transform: translateY(-5px);
+}
+
+main .produto h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+main .produto strong {
+    font-size: 16px;
+    color: var(--secundario);
+}
+
+main .produto p {
+    margin-bottom: 0; 
+    color: black;
+    margin-top: 0;
+}
+
+main .produto p .marca{
+   margin-bottom: 0;
+   padding-bottom: 0;
+}
+
+
+main .produto s {
+    color: #e74c3c;
+    margin-right: 0;
+}
+
+main .produto {
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    padding: 20px; 
+    margin: 5px; 
+    width: 300px; 
+    height: 400px; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); 
+    display: flex; 
+    flex-direction: column; 
+    background-color: white;
+   
+
+}
+
+main .produto .transparente:hover {
+    background: linear-gradient(to top, rgb(255, 253, 253), rgba(0, 0, 0, 0));
+    transition: opacity 0.5s ease; 
+    opacity: 0.5;
+   
+}
+
+
+main .produto:hover .carrinho {
+    visibility: visible;
+    opacity: 1;
+}
+main .produto .carrinho {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    border: none;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--secundario);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    transition: opacity 0.5s ease, visibility 0s;
+    width: 300px;
+    height: 35px;
+    cursor: pointer;
+    margin-top: 0;    
+}
+
+
+
+
+    aside div .precominimo {
+        border-radius: 7px;
+        border: 2px;
+    }
+    aside div .precomaximo {
+        border-radius: 7px;
+        border: 2px;
+    }
+
+    main .produto .freteGratis{
+    color: rgb(45, 218, 45);
+    margin: 0;
+    margin-left: -200;
+}
+main .produto .imagemfrete{
+    width: 40px; 
+    height: auto; 
+    margin-right: 0; 
+    margin-top: 4px;
+    
+}
+main .produto .frete-gratis{
+    display: inline-flex; 
+    align-items: center; 
+    margin-left: 0;
+}
+header img{
+    width: 150px;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    padding-top: 10px;
+    cursor: pointer;
+}
+header img:hover{
+    width: 190px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    padding-top: 5px;
+    transition: 0.5s;
+}

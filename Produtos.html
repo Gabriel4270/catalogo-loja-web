@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produto</title>
+    <link rel="stylesheet" href="projetocscs.css">
+</head>
+<body>
+    <header>
+        <h1>Nome do site</h1>
+        <div class="Pesquisa" id="pesquisa">
+            <input type="text" class="TextoDeBusca" id="TextoDeBusca" placeholder="Buscar">
+            <button class="BotaoDeBusca" id="BotaoDeBusca">Buscar</button>
+            <img src="imagens/carrinho.png" alt="carrinho">
+            
+        </div>
+    </header>
+
+    <div class="container">
+        <aside class="canto" id="canto">
+            <div class="promocao">
+                <button class="botao-de-promo" id="btn-promocao" type="button" onclick="toggleCheckboxpromo()">
+                    <input type="checkbox" id="checkbox-promocao" style="display: inline-block;">
+                    <span>Promoção</span>
+                </button>
+            </div>
+            <div class="frete">
+                <button class="botao-de-frete" id="btn-frete" type="button" onclick="toggleCheckboxfrete()">
+                    <input type="checkbox" id="checkbox-frete" style="display: inline-block;">
+                    <span>Frete Grátis</span>
+                </button>
+            </div>
+            <div class="filtrosCheck">
+            <p>Categorias:</p>
+            <div class="categoria">
+                <input type="checkbox" class="categoria-checkbox" id="checkbox-placa-de-video" value="placa de video">
+                <label for="checkbox-placa-de-video">Placa de Vídeo</label>
+            </div>
+            <div class="categoria">
+                <input type="checkbox" class="categoria-checkbox" id="checkbox-mouse" value="mouse">
+                <label for="checkbox-mouse">Mouse</label>
+            </div>
+            <div class="categoria">
+                <input type="checkbox" class="categoria-checkbox" id="checkbox-teclado" value="teclado">
+                <label for="checkbox-teclado">Teclado</label>
+            </div>
+            <div class="categoria">
+                <input type="checkbox" class="categoria-checkbox" id="checkbox-jogos" value="jogos">
+                <label for="checkbox-jogos">Jogos</label>
+            </div>
+            <p>Condição</p>
+            <div class="condicao">
+                <input type="checkbox" id="novo" class="novo" value="novo">
+                <label for="novo">Novo</label>
+            </div>
+            <div class="condicao">
+                <input type="checkbox" id="usado" class="usado" value="usado">
+                <label for="usado">Usado</label>
+            </div>
+            
+            <p>Marcas:</p>
+            <div class="marca">
+                <input type="checkbox" class="marca-checkbox" id="checkbox-redragon" value="redragon">
+                <label for="checkbox-redragon">Redragon</label>
+            </div>
+            <div class="marca">
+                <input type="checkbox" class="marca-checkbox" id="checkbox-playstation" value="Playstation">
+                <label for="checkbox-playstation">Playstation</label>
+            </div>
+            <div class="marca">
+                <input type="checkbox" class="marca-checkbox" id="checkbox-nvidea" value="nvidea">
+                <label for="checkbox-nvidea">Nvidia</label>
+            </div>
+            <div class="precos" id="preco">
+                <label for="precomin">Preço mínimo</label>
+                <input type="number" min="0" class="precominimo" id="precomin" value="0" oninput="filterProductsByPrice()">
+                <label for="precomax">Preço máximo</label>
+                <input type="number" min="0" class="precomaximo" id="precomax" value="2000" oninput="filterProductsByPrice()">
+            </div>
+        </div>
+        </aside>
+
+        <main></main>
+    </div>
+
+    <script src="projeto.js"></script>
+</body>
+</html>
